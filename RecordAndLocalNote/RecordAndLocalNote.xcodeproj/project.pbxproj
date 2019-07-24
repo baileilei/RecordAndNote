@@ -12,6 +12,7 @@
 		0645903D22E887EA006F05DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0645903B22E887EA006F05DE /* Main.storyboard */; };
 		0645903F22E887EC006F05DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0645903E22E887EC006F05DE /* Assets.xcassets */; };
 		0645904222E887EC006F05DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0645904022E887EC006F05DE /* LaunchScreen.storyboard */; };
+		0645905022E89314006F05DE /* UIBarButtonItemextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0645904F22E89314006F05DE /* UIBarButtonItemextension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0645903E22E887EC006F05DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0645904122E887EC006F05DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0645904322E887EC006F05DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0645904F22E89314006F05DE /* UIBarButtonItemextension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemextension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,9 @@
 		0645903622E887EA006F05DE /* RecordAndLocalNote */ = {
 			isa = PBXGroup;
 			children = (
+				0645904922E892CE006F05DE /* extension */,
+				0645904B22E892CF006F05DE /* PushStatus */,
+				0645904A22E892CF006F05DE /* SqliteStore */,
 				0645903722E887EA006F05DE /* AppDelegate.swift */,
 				0645903922E887EA006F05DE /* ViewController.swift */,
 				0645903B22E887EA006F05DE /* Main.storyboard */,
@@ -62,6 +67,52 @@
 				0645904322E887EC006F05DE /* Info.plist */,
 			);
 			path = RecordAndLocalNote;
+			sourceTree = "<group>";
+		};
+		0645904922E892CE006F05DE /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				0645904F22E89314006F05DE /* UIBarButtonItemextension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		0645904A22E892CF006F05DE /* SqliteStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SqliteStore;
+			sourceTree = "<group>";
+		};
+		0645904B22E892CF006F05DE /* PushStatus */ = {
+			isa = PBXGroup;
+			children = (
+				0645904C22E892CF006F05DE /* Controller */,
+				0645904D22E892CF006F05DE /* Model */,
+				0645904E22E892CF006F05DE /* View */,
+			);
+			path = PushStatus;
+			sourceTree = "<group>";
+		};
+		0645904C22E892CF006F05DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0645904D22E892CF006F05DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0645904E22E892CF006F05DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0645905022E89314006F05DE /* UIBarButtonItemextension.swift in Sources */,
 				0645903A22E887EA006F05DE /* ViewController.swift in Sources */,
 				0645903822E887EA006F05DE /* AppDelegate.swift in Sources */,
 			);
