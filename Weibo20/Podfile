@@ -1,0 +1,14 @@
+
+platform :ios, '8.0'
+
+target 'Weibo20' do
+
+  use_frameworks!
+
+  pod 'SVProgressHUD', '1.1.3'
+  pod 'AFNetworking'
+  pod 'SDWebImage'
+  pod 'YYModel'
+  pod 'pop'
+  pod 'YYText'
+end
