@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<script type="text/javascript" src="../javascript/jquery-2.1.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/distributed_test.css" />
+		<script type="text/javascript" src="../javascript/hwPluginService.js"></script>
+		<script type="text/javascript" src="../javascript/echarts.min.js"></script>
+		<script>
+			document.documentElement.style.fontSize = window.screen.width / 10.80 + 'px';
+		</script>
+	</head>
+
+	<body onload="load();" oncontextmenu="return false" onselectstart="return false">
+		<div class="distributed_content">
+			<div class="title">
+				<div class="titl_block">
+						<div class="title_left" onclick="goBack();"><a></a></div>
+						<span local_key="DISTRIBUTED_TEST" class="title-new"></span>
+						<div class="title_right" id="title_right"> <a  onclick="historyRecord()"></a></div>
+				</div>
+				<div class="distributed_test_wifiName">
+					<img src="../images/test_wifi.png">
+					<span class="topTips_wifiName" id="topTips_wifiName"></span>
+				</div>
+				
+				<div class="banner" id="banner">
+					<div class="out" id="out">
+						<div class="inner">
+							<img src="../images/circle.png">
+							<div class="content1" id="content1">
+								<div class="content_problem" id="content_problem"><span local_key="START_TEST"></span></div>
+							</div>
+							<div class="content" id="content">
+								<div class="distributed_score" id="distributed_score">
+									<span style="font-size: 0.64rem" local_key="SCORES"></span><span id="score"></span>
+								</div>
+								<div class="retest">
+									<span local_key="RETEST"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 测试区域内画图 -->
+				<div class="average_delay_main" id="average_delay_main" style="width: 100%; display: block;">
+					<div id="main" style="width: 10.80rem; height: 5.0rem;margin-top: 2.5rem;"></div>
+					<div class="moveTitle">
+						<span local_key="FRENDLY_TIPS"></span>
+					</div>
+					<div class="stop_test">
+						<button id="stop_test" onclick="stopTest();"><span local_key="CHANNEL_RESELECTION"></span></button>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="test_type">
+				<div id="iosLinkpeed">
+					<img src="../images/test_icon01.png">
+					<div class="test_icon">
+						<span local_key="AVERAGE_SPEED"></span><span class="average_speed" id="average_speed">--</span>
+						<span  id="linkSpeed" class="average_speed">Mbps</span>
+					</div>
+				</div>
+				<div>
+					<img src="../images/test_icon02.png">
+					<div>
+						<span local_key="AVERAGE_DELAY"></span><span class="average_speed" id="average_delay">--</span>
+						<span class="average_speed">ms</span>
+					</div>
+				</div>
+				<div>
+					<img src="../images/test_icon03.png">
+					<div>
+						<span local_key="SIGNAL_INTENSITY"></span><span class="average_speed" id="signal_intensity">--</span>
+						<span  id="signal_intensity_unit" class="average_speed">dBm</span>
+					</div>
+				</div>
+				<div>
+					<img src="../images/test_icon04.png">
+					<div>
+						<span local_key="PACKAGE_LOSS_RATE"></span>
+						<span class="packet_loss_rate" id="packet_loss_rate">0</span><span class="packet_loss_rate">%</span>
+					</div>
+				</div>
+			</div>
+			<div id="wrapper">
+				<div id="scroller">
+				</div>
+			</div>
+		</div>
+
+		<div class="distributed_point" id="distributed_point">
+			<div class="distributed_point_content">
+				<div class="distributed_point_title">
+					<span local_key="DISTRIBUTED_TEST"></span>
+				</div>
+				<div class="distributed_point_description">
+					<span local_key="DISTRIBUTE_POINT_TITLE"></span><span style="color: #ff8000" local_key="DISTRIBUTE_POINT_ORANGE"></span>
+				</div>
+				<div class="distributed_point_img">
+					<img id="hintImg">
+				</div>
+				<div class="distributed_point_button">
+					<button onclick="button_know();"><span local_key="BUTTON_KNOW"></span></button>
+				</div>
+			</div>
+		</div>
+		
+	<div class="deleteConfirm">
+		<div id="deleteRecordId"></div>
+	    <div><img src="../images/delete_bg.png" alt=""></div>
+	    <div><span local_key="WIFI_DISCONTENT"></span></div>
+			<div class="btn_box">
+				<button onclick="confirm()"><span local_key="CONFIRM"></span>
+				</button>
+			</div>
+	</div>
+	<div class="shade"></div>
+	</body>
+	<script type="text/javascript" src="../javascript/distributed_test.js"></script>
+</html>

@@ -9,7 +9,8 @@
 import UIKit
 
 extension UIBarButtonItem{
-    convenience init(_ title:String) {
+    
+    convenience init(_ title:String,target:Any,action:Selector) {
         self.init()
         
         let button = UIButton()
@@ -19,6 +20,7 @@ extension UIBarButtonItem{
         
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         button.sizeToFit()
+        button.addTarget(target, action: action, for: .touchUpInside)
         
         customView = button
     }

@@ -1,0 +1,451 @@
+.back_and_top {
+    background: -webkit-linear-gradient(left, #177de3, #0561c7);
+    height: 3.6rem;
+}
+
+.header {
+    background: #134271;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 0.4rem;
+    z-index: 100;
+}
+
+.header button {
+    width: 0.4rem;
+    font-size: 0.3rem;
+    font-weight: bolder;
+    background: rgba(0, 0, 0, 0);
+    line-height: 0.4rem;
+}
+
+.header button:nth-child(1) {
+    background: url("../image/back.png") no-repeat center;
+    background-size: 0.12rem 0.24rem;
+}
+
+.title-new {
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 0.02rem;
+    /* padding: 0 0.8rem 0 0.2rem; */
+    font-size: 0.20rem;
+    height: 0.32rem;
+    line-height: 0.4rem;
+    color: #ffffff;
+}
+
+h4.title {
+    margin-top: 0.4rem;
+    padding: 0 0.8rem 0 0.2rem;
+    font-size: 0.26rem;
+    height: 0.32rem;
+    line-height: 0.4rem;
+    color: #ffffff;
+}
+
+p.wifi_name {
+    padding: 0 0.2rem 0 0.35rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.08rem;
+    background: url(../image/detection_wifi.png) no-repeat 0.2rem 0.075rem;
+    line-height: 0.25rem;
+    background-size: 0.10rem 0.08rem;
+    color: #a4cef7;
+}
+
+.banner {
+    width: 2.38889rem;
+    height: 2.38889rem;
+    margin: auto;
+    padding-top: 0.05rem;
+    position: relative;
+}
+
+.banner .div {
+    color: #66a5e4;
+    position: absolute;
+    font-size: 0.5rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0) !important;
+    margin-top: -0.41rem;
+    margin-left: -0.03rem
+}
+
+.banner .out {
+    width: 2.25694rem;
+    height: 2.25694rem;
+    border-radius: 50%;
+    margin: auto;
+    padding-top: 0.01736rem;
+    border: 1px solid #3691ee;
+    box-sizing: border-box;
+}
+
+.banner .out .inner {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    border-radius: 50%;
+    margin: auto;
+    padding-top: 0.01736rem;
+    border: 2px solid #75b3f3;
+    box-sizing: border-box;
+}
+
+.banner .out .inner .content {
+    width: 2.11806rem;
+    height: 2.11806rem;
+    border-radius: 50%;
+    border: 3px solid #5fa8f1;
+    box-sizing: border-box;
+    margin: auto;
+    position: relative;
+}
+
+.banner .out .inner .content .content_result {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 0.5rem;
+}
+
+.banner .out .inner .content .content_result span:nth-child(1) {
+    font-size: 0.42rem;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.banner .out .inner .content .content_result span:nth-child(2) {
+    font-size: 0.13rem;
+    color: #9DC9F6;
+    margin-top: 0.24rem;
+    margin-left: 0.08rem;
+}
+
+.banner .out .inner .content .content_state {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0.95rem;
+    font-size: 0.13rem;
+    height: 0.96rem;
+    color: #9DC9F6;
+}
+
+.banner .out .inner .content .content_problem {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 0.04rem;
+    font-size: 0.26rem;
+    color: #ffffff;
+}
+
+.banner .out .inner .content p {
+    position: absolute;
+    left: 0;
+    top: 1.20rem;
+    width: 100%;
+    padding-top: 0.16rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.banner .out .inner .content p button {
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    height: 0.3rem;
+    font-size: 0.22rem;
+    font-weight: bold;
+}
+
+.wifi_test_content {
+    padding-top: 0.2rem;
+}
+
+.wifi_test_content .port_ul {
+    width: 82%;
+    margin: 0 auto;
+}
+
+.wifi_test_content .port_ul .out_li {
+    position: relative;
+    padding-left: 10%;
+    border-left: 1px dashed #999999;
+    padding-bottom: 0.12rem;
+    /* border-bottom: 1px dashed #999999; */
+}
+
+.wifi_test_content .port_ul .out_li .inner_ul .globalTrouble {
+    display: none;
+}
+
+.wifi_test_content .port_ul .out_li .inner_ul .subTrouble {
+    display: none;
+    margin-left: 0.3rem;
+}
+
+.wifi_test_content .port_ul .out_li:first-child .img_bg {
+    width: 0.34rem;
+    height: 0.34rem;
+    position: absolute;
+    top: 0;
+    left: -0.18rem;
+    background: #ffffff;
+}
+
+.wifi_test_content .port_ul .out_li:first-child>p {
+    font-size: 0.21rem;
+    line-height: 0.36rem;
+    padding-top: 0;
+}
+
+.wifi_test_content .port_ul .out_li>p {
+    font-size: 0.21rem;
+    line-height: 0.4rem;
+    padding-top: 0.15rem;
+}
+
+.wifi_test_content .port_ul .out_li .img_bg {
+    width: 0.34rem;
+    height: 0.34rem;
+    position: absolute;
+    top: 0.15rem;
+    left: -0.18rem;
+    background: #ffffff;
+}
+
+.wifi_test_content .port_ul .out_li .inner_ul li {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    padding-bottom: 0.06rem;
+}
+
+.wifi_test_content .port_ul .out_li .inner_ul li img {
+    height: 0.12rem;
+    width: 0.12rem;
+    display: block;
+}
+
+.wifi_test_content .port_ul .out_li .inner_ul .globalTrouble img {
+    align-self: flex-start;
+}
+
+.wifi_test_content .port_ul .out_li .inner_ul li p {
+    word-wrap: break-word;
+    width: 60%;
+    font-size: 0.12rem;
+    line-height: 0.18rem;
+    margin: 0 0.12rem;
+    color: #A4A4A4;
+}
+
+.wifi_test_content .port_ul .out_li .inner_ul li button {
+    width: 0.72rem;
+    font-size: 0.12rem;
+    /* height: 0.25rem; */
+    border-radius: 4px;
+    background: #ffffff;
+    border: 1px solid #2095f5;
+    outline: none;
+    color: #2095f5;
+    cursor: pointer;
+}
+
+.wifi_test_content .port_ul .out_li .inner_ul li .hideButton {
+    width: 0.72rem;
+    border: 0;
+}
+
+.wifi_test_content .port_ul .out_li .inner_ul li .subTrouble {
+    display: none
+}
+
+.wifi_test_content .port_ul .out_li .inner_ul .checkItems {
+    display: none;
+}
+
+.wifi_test_content .port_ul .out_li .inner_ul .ErrorItems {
+    display: block;
+}
+
+.td_result_img img[src=""] {
+    opacity: 0;
+}
+
+#mask {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+}
+
+.win_warning {
+    width: 3.259259rem;
+    height: 2.555556rem;
+    background-color: #fff;
+    position: fixed;
+    left: 0.251852rem;
+    top: 1.703704rem;
+    border: 0.018519rem solid transparent;
+    border-radius: 0.055185rem;
+    z-index: 1000;
+}
+
+.top_image>img {
+    width: 0.644444rem;
+    height: 0.644444rem;
+    display: block;
+    margin: 0.2rem auto;
+}
+
+.middle_desc {
+    width: 100%;
+    padding: 0.18185rem;
+    /* font-size: 0.37037rem; */
+    color: #333;
+    position: relative;
+}
+
+.tips_title {
+    margin-top: 0.1rem;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #ffffff;
+}
+
+.err_tips {
+    background: #ffffff;
+    color: #333;
+    width: 2.259259rem;
+    height: 1.355556rem;
+    position: fixed;
+    left: 50%;
+    margin-left: -1.13rem;
+    top: 50%;
+    margin-top: -0.68rem;
+    border: 0.018519rem solid transparent;
+    border-radius: 0.05185rem;
+    z-index: 1000;
+}
+
+.empty_tips {
+    text-align: left;
+    width: 3rem;
+    font-size: 0.14rem;
+    color: red;
+    padding-left: 0.18185rem;
+}
+
+.win_span {
+    padding-left: 10%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sure_span {
+    display: block;
+    position: absolute;
+    bottom: 0.1rem;
+    right: 0.18rem;
+    color: #1ae;
+}
+
+.bottom_button {
+    /* margin-top: 0.703704rem; */
+    border-top: 0.018519rem solid #eee;
+    /* height: 0.385185rem; */
+    font-size: 0.14rem;
+    color: #2095f5;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.bottom_button>div {
+    position: relative;
+    float: left;
+    width: 49%;
+    /* height: 50%; */
+    line-height: 0.385185rem;
+    text-align: center;
+}
+
+.bottom_button>div:nth-child(1) {
+    border-right: 0.018519rem solid #eee;
+}
+
+.title {
+    width: 100%;
+    /* text-align: center; */
+    font-size: 0.444444rem;
+    color: #2095f5;
+    /* margin-top: 0.703704rem; */
+}
+
+.param_name {
+    text-align: left;
+    margin: 0.703704rem 0.685185rem;
+    height: 1.0rem;
+    line-height: 1.0rem;
+    font-size: 0.333333rem;
+}
+
+form input {
+    display: inline-block;
+    text-align: left;
+    height: 0.36rem;
+    width: 2rem;
+    font-size: 0.14rem;
+    border: 0.018519rem solid #eee;
+    border-radius: 0.046296rem;
+}
+
+form .ssid_name {
+    display: flex;
+    padding: 0.18185rem;
+    align-items: center
+}
+
+.table {
+    margin-left: -0.5rem;
+}
+
+.tableClass {
+    text-align: center;
+    font-size: 0.12rem;
+    min-width: 0.84rem;
+    max-width: 1rem;
+    color: #A4A4A4;
+}
+
+input::-webkit-input-placeholder {
+    color: #bcbcbc;
+    font-size: 0.333333rem;
+}

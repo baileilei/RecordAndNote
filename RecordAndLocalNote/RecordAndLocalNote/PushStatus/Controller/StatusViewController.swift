@@ -9,66 +9,69 @@
 import UIKit
 
 class StatusViewController: UIViewController {
+    
+    var dataModel = DataModel()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "朋友圈"
         
-        loadData()
+        let rightItem = UIBarButtonItem.init("test", target: self, action: #selector(test))
+        navigationItem.rightBarButtonItem = rightItem
+        
         
         let tableView = UITableView(frame: view.bounds, style: .plain)
+//        tableView.delegate = self as! UITableViewDelegate
+        tableView.dataSource = self as UITableViewDataSource
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "friendStatus")
         view.addSubview(tableView)
         
         writeToPlist()
         
     }
     
+    @objc func test() {
+        let array = dataModel.userList
+        for user in array {
+            print(user.name)
+        }
+    }
+    
     //http://www.hangge.com/blog/cache/detail_719.html
     func writeToPlist() -> Void {
-        var json : [[String : String]] = [
-        [
-            "name" : "json1",
-            "title" : "测试1",
-            ],
-        [
-            "name" : "json2",
-            "title" : "测试2",
-            ],
-        [
-            "name" : "json3",
-            "title" : "测试3",
-            ]
-        ]
         
-        var data = NSMutableData()
-        data.write(toFile: <#T##String#>, atomically: <#T##Bool#>)
+        dataModel.userList.append(UserInfo(name: "zhangsan", phone: "1234"))
+        dataModel.userList.append(UserInfo(name: "lisi", phone: "1212"))
+        dataModel.userList.append(UserInfo(name: "wangwu", phone: "1233"))
         
+        dataModel.saveData()
+    }
+    
+    func documentsDirectory() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         
-//        JSONSerialization.write
-        
+        let documentsDir = paths.first!
+        return documentsDir
         
     }
     
-    
-    func loadData() -> Void {
-        let path = Bundle.main.path(forResource: "test.plist", ofType: nil)
-        print(path)
-        
-        if let jsonPath = path {
-            let jsonData = NSData(contentsOfFile: jsonPath)
-//            try! let jsonData = Data(contentsOf: URL.init(fileURLWithPath: jsonPath))
-//            print(jsonData)
-            do{
-                let dictArr = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
-                
-                for dict in dictArr as! [[String:String]]{
-                    print(dict)
-                }
-            }catch{
-                print(error)
-            }
-        }
-        
+    func dataFilePath() -> String {
+        return self.documentsDirectory().appendingFormat("/userList.plist")
     }
 
+}
+
+extension StatusViewController:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataModel.userList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "friendStatus", for: indexPath)
+        cell.textLabel?.text = self.dataModel.userList[indexPath.row].name
+        
+        return cell
+        
+    }
 }

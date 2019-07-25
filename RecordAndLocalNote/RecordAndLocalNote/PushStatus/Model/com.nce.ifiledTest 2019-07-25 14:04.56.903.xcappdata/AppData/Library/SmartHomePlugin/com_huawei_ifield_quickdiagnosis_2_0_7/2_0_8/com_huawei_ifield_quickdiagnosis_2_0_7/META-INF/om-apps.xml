@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<apps resource="resource/resource.properties" public-js-path="WebContent/public/js/hw_plugin_public.js">
+	
+    <!-- 服务接口，需要实现 IApplication接口 -->
+    <service name="gatewayCheck"
+        implement-class="com.huawei.smarthome.homenetworkmanagement.NetworkManagementApplicationV2">
+        <actions>
+            <!-- 1.4.2.1 支持查询支持的体检项列表 -->
+            <action name="getSupportedCheckItemList"></action>
+            <!-- 1.4.2.2 支持启动体检 -->
+            <action name="startCheck"></action>
+            <!-- 1.4.2.3 支持查询体检结果 -->
+            <action name="getCheckResult"></action>
+            <!-- 1.4.2.4 支持取消体检 -->
+            <action name="cancelCheck"></action>
+            <!-- 1.4.2.5 支持启动优化 -->
+            <action name="startOptimization"></action>
+        </actions>
+    </service>
+    
+    	<!--一键体检 -->
+	<app name="PLUGIN_TITLE" title="PLUGIN_TITLE" extend-point="com.huawei.openlife.homenetwork">
+		<icon>public/image/icon1.png</icon>
+		<entry>phyExamination/html/phyExamination.html</entry>
+	</app>
+</apps>

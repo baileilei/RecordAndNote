@@ -1,0 +1,202 @@
+@CHARSET "UTF-8";
+
+*{
+    margin: 0px;
+    padding:0px;
+    outline: none;
+    -webkit-tap-highlight-color:rgba(255,255,255,0)
+}
+
+body {
+    width:100%;
+    background-size:100% 100%;
+    text-align:center;
+    background-color: #fff;
+}
+button{
+    border: 0;
+    outline: none;
+}
+
+ul,ul li {
+  list-style:none;
+}
+.title {
+    height:1.48rem;
+    width: 100%;
+    position: relative;
+    background-color: #134271;
+}
+
+.title>div {
+    position: absolute;
+    color:#fff;
+
+}
+
+.title .title_left {
+    height: 1.68rem;
+    line-height: 1.68rem;
+    left: 0.72rem;
+    z-index: 2;
+}
+
+.title .title_left a {
+    width: 0.28rem;
+    height: 1.68rem;
+    background: url("../images/test_PageBack.png") no-repeat left center;
+    background-size:100% 0.5rem;
+    display: block;
+}
+
+.title button.clearAll {
+  float: right;
+  margin-right: 0.68rem;
+  line-height:1.48rem;
+  background:#134271;
+  font-size: 0.38rem;
+  font-family: PingFang-SC-Regular;
+  color: #fff;
+}
+
+.title .title_center {
+    font-family: PingFang-SC-Regular;
+    height: 1.68rem;
+    line-height: 1.68rem;
+    width: 70%;
+    font-size: 0.48rem;
+    color: #ffffff;
+    margin-left: 1.6rem;
+}
+
+#history_notes a{
+    text-decoration: none;
+}
+
+.history_list {
+  width: 100%;
+ overflow: hidden;
+}
+.history_list ul{
+  overflow: hidden;
+ }
+.history_list ul li{
+  position: relative;
+  transform: translateX(0px);
+}
+
+.history_list ul li div{
+  padding: 0.23rem 0 0.23rem 0;
+  margin: 0 0.72rem 0 0.72rem;
+  border-bottom: 1px solid #eeeeee;
+}
+.history_list ul li button{
+  position: absolute;
+  font-size: 0.46rem;
+  height: 100%;
+  width: 100px;
+  color: #ffffff;
+  background: red;
+  top: 0;
+  right: -100px;
+}
+
+.history_list ul li div p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.history_list ul li div p span em, .history_list ul li p span i {
+  font-style: normal;
+  color:#5ccbb1;
+  font-size: 0.46rem;
+}
+
+.history_list ul li div p span i {
+  
+}
+
+.history_list ul li div p:nth-child(1) {
+  margin-bottom: 0.144rem;
+  font-size: 0.40rem;
+  color: #333333;
+}
+
+.history_list ul li div p:nth-child(1) span:nth-child(1) {
+  max-width: 80%;
+  font-size: 0.46rem;
+  word-break: break-all;
+  text-align: center;
+}
+
+.history_list ul li div p:nth-child(2) {
+  font-size: 0.35rem;
+  color: #999999;
+}
+
+.history_list ul li div p:nth-child(2) span em {
+  color: #999999;
+}
+.deleteConfirm{
+  display: none;
+  z-index: 999;
+  width: 85%;
+  height: 4.40rem;
+  position: fixed;
+  top:50%;
+  left: 50%;
+  background: #ffffff;
+  transform: translate(-50%,-50%);
+}
+
+.deleteConfirm #deleteRoomId{
+  display:none;
+}
+.deleteConfirm div{
+  text-align: center;
+  color: #333333;
+}
+.deleteConfirm div:nth-child(2){
+  margin-top: 0.63rem;
+}
+.deleteConfirm div:nth-child(3){
+   font-size:0.46rem;
+}
+.deleteConfirm div img {
+  width:0.72rem;
+  height: 0.72rem;
+}
+.deleteConfirm .btn_box{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+.deleteConfirm .btn_box button {
+  flex: 1;
+  height: 1.2rem;
+  background: #ffffff;
+  border-top:1px solid #ccc;
+}
+.deleteConfirm .btn_box button:nth-child(1){
+  color: #999999;
+  border-right:1px solid #ccc;
+}
+.deleteConfirm .btn_box button:nth-child(2){
+  color: #2695fc;
+}
+
+.deleteConfirm #deleteRecordId{
+	display:none;
+}
+.shade {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 50;
+}

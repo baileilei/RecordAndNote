@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/history.css">
+    <script type="text/javascript" src="../javascript/hwPluginService.js"></script>
+    <script type="text/javascript" src="../javascript/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../javascript/iscroll.js"></script>
+    <script type="text/javascript" src="../javascript/history.js"></script>
+    <script>
+        document.documentElement.style.fontSize = window.screen.width /3.75 + 'px';
+    </script>
+</head>
+<body onload = "load();">
+<header class="header">
+    <button class="back" onclick="goBack();"></button>
+    <h4><span locale_key="TEST_RECORD"></span></h4>
+    <button onclick="clearAll();" class="clearAll"><span locale_key="CLEARALL"></span></button>
+</header>
+<div class="history_list">
+    <ul id="ul_list">
+
+    </ul>
+</div>
+<div class="deleteConfirm">
+	<div id="deleteRecordId"></div>
+    <div><img src="../image/delete_bg.png" alt=""></div>
+    <div><span locale_key="DO_YOU_CONFIRM_DELETE"></span></div>
+    <div class="btn_box">
+         <button onclick="cancelDeleteRecord()"><span locale_key="CANCEL"></span></button>
+         <button onclick="confirmDeleteRecord()"><span locale_key="CONFIRM"></span></button>
+    </div>
+</div>
+<div class="shade"></div>
+</body>
+</html>

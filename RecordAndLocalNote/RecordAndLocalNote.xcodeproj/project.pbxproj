@@ -14,8 +14,9 @@
 		0645904222E887EC006F05DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0645904022E887EC006F05DE /* LaunchScreen.storyboard */; };
 		0645906022E89711006F05DE /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0645905F22E89711006F05DE /* UIKit+Extension.swift */; };
 		0645906222E89845006F05DE /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0645906122E89845006F05DE /* StatusViewController.swift */; };
-		0645906422E899BA006F05DE /* moments.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0645906322E899BA006F05DE /* moments.plist */; };
-		0645906622E89D97006F05DE /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0645906522E89D96006F05DE /* test.plist */; };
+		B6D29CB822E94F200036ABC7 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D29CB722E94F200036ABC7 /* UserInfo.swift */; };
+		B6D29CBA22E9576D0036ABC7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D29CB922E9576D0036ABC7 /* DataModel.swift */; };
+		B6D29CBC22E996F60036ABC7 /* userList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6D29CBB22E996F60036ABC7 /* userList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +29,9 @@
 		0645904322E887EC006F05DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0645905F22E89711006F05DE /* UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
 		0645906122E89845006F05DE /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
-		0645906322E899BA006F05DE /* moments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = moments.plist; sourceTree = "<group>"; };
-		0645906522E89D96006F05DE /* test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = test.plist; sourceTree = "<group>"; };
+		B6D29CB722E94F200036ABC7 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		B6D29CB922E9576D0036ABC7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		B6D29CBB22E996F60036ABC7 /* userList.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = userList.plist; path = "com.nce.ifiledTest 2019-07-25 14:04.56.903.xcappdata/AppData/Documents/userList.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		0645905B22E896FE006F05DE /* PushStatus */ = {
 			isa = PBXGroup;
 			children = (
+				B6D29CB622E94F000036ABC7 /* Model */,
 				0645905C22E896FE006F05DE /* Controller */,
 				0645905D22E896FE006F05DE /* Model */,
 				0645905E22E896FE006F05DE /* View */,
@@ -111,8 +114,6 @@
 		0645905D22E896FE006F05DE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0645906522E89D96006F05DE /* test.plist */,
-				0645906322E899BA006F05DE /* moments.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +123,16 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B6D29CB622E94F000036ABC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6D29CBB22E996F60036ABC7 /* userList.plist */,
+				B6D29CB722E94F200036ABC7 /* UserInfo.swift */,
+				B6D29CB922E9576D0036ABC7 /* DataModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,9 +195,8 @@
 			files = (
 				0645904222E887EC006F05DE /* LaunchScreen.storyboard in Resources */,
 				0645903F22E887EC006F05DE /* Assets.xcassets in Resources */,
-				0645906422E899BA006F05DE /* moments.plist in Resources */,
-				0645906622E89D97006F05DE /* test.plist in Resources */,
 				0645903D22E887EA006F05DE /* Main.storyboard in Resources */,
+				B6D29CBC22E996F60036ABC7 /* userList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +210,9 @@
 				0645906222E89845006F05DE /* StatusViewController.swift in Sources */,
 				0645903A22E887EA006F05DE /* ViewController.swift in Sources */,
 				0645906022E89711006F05DE /* UIKit+Extension.swift in Sources */,
+				B6D29CB822E94F200036ABC7 /* UserInfo.swift in Sources */,
 				0645903822E887EA006F05DE /* AppDelegate.swift in Sources */,
+				B6D29CBA22E9576D0036ABC7 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,14 +359,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SS3JMJH6PN;
 				INFOPLIST_FILE = RecordAndLocalNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yy.RecordAndLocalNote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nce.ifiledTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -364,14 +378,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SS3JMJH6PN;
 				INFOPLIST_FILE = RecordAndLocalNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yy.RecordAndLocalNote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nce.ifiledTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

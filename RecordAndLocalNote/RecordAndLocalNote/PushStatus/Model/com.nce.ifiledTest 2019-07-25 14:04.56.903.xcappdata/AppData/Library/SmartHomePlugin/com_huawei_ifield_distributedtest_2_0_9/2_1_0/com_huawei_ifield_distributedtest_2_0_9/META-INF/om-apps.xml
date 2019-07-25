@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<apps resource="resource/resource.properties" public-js-path="surroundWifi/javascript/hw_plugin_public.js">
+	<app name="DISTRIBUTED_TEST" title="DISTRIBUTED_TEST" extend-point="com.huawei.openlife.homenetwork">
+		<icon>distributedTest/images/icon.png</icon>
+		<entry>distributedTest/html/distributed_test.html</entry>
+	</app>
+</apps>

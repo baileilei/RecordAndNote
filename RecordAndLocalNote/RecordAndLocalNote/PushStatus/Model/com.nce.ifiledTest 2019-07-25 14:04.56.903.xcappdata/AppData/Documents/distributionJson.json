@@ -1,0 +1,58 @@
+{
+  "testList" : [
+    {
+      "data" : [
+        {
+          "Wifi" : {
+            "linkedSpeed" : "51",
+            "RSSI" : "3",
+            "BSSId" : "78F55727072C",
+            "SSID" : "QY223480"
+          },
+          "Ping" : {
+            "lostNum" : "",
+            "delay" : "11.825998",
+            "count" : "",
+            "lost" : "0.000000",
+            "TTL" : "64"
+          },
+          "Switch" : {
+            "srcMac" : "48:46:c1:a4:b3:06",
+            "index" : "",
+            "time" : "1562727555000",
+            "srcName" : "ES-107687",
+            "useTime" : "20.442644",
+            "lost" : "0",
+            "destMac" : "30:89:d4:9b:50:e0",
+            "destName" : "QY223480"
+          }
+        }
+      ],
+      "score" : 89,
+      "ssid" : "ES-107687",
+      "Id" : "1562727590735"
+    },
+    {
+      "data" : [
+        {
+          "Wifi" : {
+            "SSID" : "(null)",
+            "linkedSpeed" : "51",
+            "BSSId" : "78F55727072C",
+            "RSSI" : "3"
+          },
+          "Ping" : {
+            "lostNum" : "",
+            "delay" : "10.372679",
+            "count" : "",
+            "lost" : "18.181818",
+            "TTL" : "64"
+          }
+        }
+      ],
+      "score" : 71,
+      "ssid" : "smartwifi_yj_2.4G",
+      "Id" : "1562727616136"
+    }
+  ]
+}

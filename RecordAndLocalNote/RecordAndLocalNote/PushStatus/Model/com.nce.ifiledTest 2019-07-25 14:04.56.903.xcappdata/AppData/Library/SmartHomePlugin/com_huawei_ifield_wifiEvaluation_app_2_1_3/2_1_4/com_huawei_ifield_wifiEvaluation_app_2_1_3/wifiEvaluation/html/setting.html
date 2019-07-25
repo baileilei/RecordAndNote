@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/setting.css">
+    <script type="text/javascript" src="../javascript/hwPluginService.js"></script>
+    <script type="text/javascript" src="../javascript/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../javascript/iscroll.js"></script>
+    <script type="text/javascript" src="../javascript/setting.js"></script>      
+    <script>
+        document.documentElement.style.fontSize = window.screen.width /3.75 + 'px';
+    </script>
+</head>
+<body onload="load();">
+<header class="header">
+    <button onclick="goBack();"></button>
+    <span locale_key="SETTINGS" class="title-new"></span>
+    <button></button>
+</header>
+
+<ul class="parameter_setting">
+    <li>
+        <a onclick="resetting()">
+            <div class="description"><span locale_key="TEST_WEB_LINK"></span></div>
+            <div class="numbers"><span id="webLink"></span></div>
+        </a>
+    </li>
+   
+</ul>
+</body>
+</html>

@@ -1,0 +1,512 @@
+@CHARSET "UTF-8";
+
+*{
+	margin: 0px;
+	padding:0px;
+	overflow: hidden;
+	-webkit-tap-highlight-color:rgba(255,255,255,0)
+}
+
+body {
+	width:100%;
+	background-size:100% 100%;
+	text-align:center;
+	background-color: #fff;
+}
+
+body span {
+	font-family: PingFangSC-Regular;
+}
+
+.distributed_content {
+	display: block;
+}
+
+.distributed_point {
+	display: none;
+	position:fixed;
+	top:0;
+	z-index:9;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.3)
+}
+
+.distributed_point_content {
+	position:fixed;
+	top: 4.16rem;
+	left: 0.64rem;
+	width: 9.52rem;
+	height: 10.20rem;
+	background-color: #ffffff;
+}
+
+.distributed_point_title {
+	font-family: PingFang-SC-Medium;
+	height: 1.76rem;
+	line-height: 1.76rem;
+	font-size: 0.48rem;
+	color: #212121;
+	text-align: center;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.distributed_point_description {
+	width: 8.32rem;
+	margin-left: 0.6rem;
+	text-align: left;
+	justify-content: space-between;
+	align-items: center;
+	word-wrap:break-word;
+	font-family: PingFangSC-Regular;
+	height: 1.5rem;
+	font-size: 0.32rem;
+	color: #212121;
+	padding-top:0.3rem;
+}
+
+.distributed_point_img {
+	width: 8.32rem;
+	height: 4.16rem;
+	padding-top:0.1rem;
+}
+
+.distributed_point_img img{
+	width: 100%;
+	height: 100%;
+	margin-left: 0.6rem;
+}
+
+.distributed_point_button {
+	width: 100%;
+	margin-top: 0.6rem;
+}
+
+.distributed_point_button button {
+	text-decoration: none;
+	width: 8.23rem;
+	height: 1.04rem;
+	outline: none;
+	background-color: #2695fc;
+	border: none;
+	border-radius: 0.08rem;
+}
+
+.distributed_point_button button span {
+	font-family: PingFangSC-Regular;
+	font-size: 0.44rem;
+	color: #ffffff;
+}
+
+.distributed_point_button button:active {
+	background-color: #1976c3;
+}
+
+.title-new {
+	text-align: center;
+	margin: 0 auto;
+	display: inline-block;
+	margin-top: 0.3rem;
+	line-height: 0.8rem;
+	padding: 0 0.2rem 0 0.2rem;
+	font-size: 0.5rem;
+	/* line-height: 0.4rem; */
+	color: #ffffff;
+}
+
+.title {
+	height:13.02rem;
+	width: 100%;
+	background: -webkit-linear-gradient(
+	top, #228ef5, #157be1, #0a6ad0
+	);
+}
+
+.title .titl_block{
+	background: #134271;
+}
+
+.title .titl_block .title_left {
+	float: left;
+	height: 1.32rem;
+	line-height: 1.32rem;
+	margin-left: 0.72rem;
+}
+
+.title .titl_block .title_left a {
+	width: 0.28rem;
+	height: 1.32rem;
+	background: url("../images/test_PageBack.png") no-repeat left center;
+	background-size:100% 0.5rem;
+	display: block;
+}
+
+.title .titl_block .title_right {
+	/* position: absolute; */
+	height: 1.32rem;
+	line-height:1.32rem;
+	float: right;
+	/* right: 0.72rem; */
+	margin-right: 0.72rem;
+}
+
+.title .titl_block .title_right a {
+	width: 0.6rem;
+	height: 1.32rem;
+	background: url("../images/test_history.png") no-repeat left center;
+	background-size:100% 0.61rem;
+	display: block;
+}
+
+.distributed_test_span {
+	position: absolute;
+	font-family: PingFang-SC-Medium;
+	float: left;
+	margin-left: 0.72rem;
+	top: 1.92rem;
+	font-size: 0.8rem;
+	color: #ffffff;
+}
+
+.distributed_test_wifiName {
+	position: absolute;
+	top: 2.1rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	float: left;
+	margin-left: 0.72rem;
+	display: flex;
+	align-items: center;
+}
+
+.distributed_test_wifiName img {
+	width: 0.32rem;
+	height:0.32rem;
+	margin-right: 0.16rem;
+}
+
+.distributed_test_wifiName span {
+	font-size: 0.32rem;
+	color: #ffffff;
+}
+
+.test_type {
+	display:flex;
+	justify-content: space-between;
+	margin: 0.6rem 0.66rem 0rem 0.66rem;
+}
+.test_type > div{
+	flex:1;
+}
+.test_type img {
+	display:block;
+	margin:0 auto;
+	width: 0.8rem;
+	height: 0.8rem;
+}
+
+.test_type span:nth-child(1) {
+	display:  block;
+	font-size: 0.32rem;
+	color: #212121;
+	/* position: absolute; */
+	margin-top: 0.32rem;
+	text-align:  center;
+}
+
+.average_speed{
+	font-size: 0.28rem;
+	position: relative;
+	top: -0.36rem;
+	font-family: TitilliumWeb-Regular;
+	color: #999999;
+}
+
+.packet_loss_rate {
+	font-size: 0.28rem;
+	position: relative;
+	top: -0.36rem;
+	font-family: TitilliumWeb-Regular;
+	color: #5ccbb1;
+}
+
+#wrapper {
+	left: 0rem;
+	right: 0rem;
+	bottom: 0rem;
+	overflow-y: auto;
+	display: block;
+}
+
+#scroller {
+	top: 0rem;
+	left: 0rem;
+	right: 0rem;
+	height: auto;
+}
+
+.test_details_data {
+	display: flex;
+	margin-left: 0.6rem;
+	margin-right: 0.6rem;
+	justify-content: space-between;
+	border-top: 1px solid #e6e6e6;
+}
+
+.test_details_data_cn{
+	height: 2.4rem;
+}
+
+.test_details_data_en{
+	height: 3rem;
+}
+
+.test_details_circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-top:0.5rem;
+	/* margin-right: 0.1rem; */
+	margin-left: 0.5rem;
+}
+
+.circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #1c90fc;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	color: #ffffff;
+	font-size: 0.28rem;
+}
+
+.test_data_title {
+	/* position: absolute; */
+	line-height: 0.5rem;
+	margin-top: 0.5rem;
+	margin-left: 0.3rem;
+	font-size: 0.32rem;
+	color: #212121;
+	/* padding-right: 0.2rem; */
+	text-align: left;
+	align-items: center;
+	font-family: PingFangSC-Regular, PingFang-SC-Medium, PingFangSC-Light;
+}
+
+.test_details_style {
+	margin-right: 0.05rem;
+	margin-left: 0.05rem
+}
+
+.test_details_style2 {
+	margin-left: 0.05rem;
+	color: #5ccbb1;
+}
+
+.test_data_details {
+	/* position: absolute; */
+	/* width: 7.1rem; */
+	margin-left: 0.3rem;
+	font-size: 0.32rem;
+	text-align: left;
+	align-items: center;
+	word-wrap:break-word;
+	color: #999999;
+	font-family: PingFangSC-Regular, PingFangSC-Semibold;
+}
+
+.test_data_details_cn{
+	/* margin-top: 1.1rem; */
+}
+
+.test_data_details_en{
+	/* margin-top: 0.2rem; */
+}
+
+.banner {
+	display: block;
+	width:6.5rem;
+	height:6.5rem;
+	margin:2.72rem auto;
+}
+
+.banner .div {
+	color: #66a5e4;
+	position: absolute;
+	font-size: 0.5rem;
+	text-align: center;
+	background: rgba(255,255,255,0) !important;
+}
+
+.banner .out {
+	width: 6.5rem;
+	height: 6.5rem;
+	margin: auto;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.banner .out .inner {
+	width: 6.5rem;
+	height: 6.5rem;
+	position: absolute;
+	box-sizing: border-box;
+
+}
+
+.banner .out .inner img {
+	width: 6.4rem;
+	height: 6.4rem;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0.05rem;
+	left:0.05rem;
+
+}
+
+.banner .out .inner .content {
+	display: none;
+	width: 6.4rem;
+	height: 6.4rem;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0.05rem;
+	left:0.05rem;
+
+}
+
+.banner .out .inner .content1 .content_problem {
+	display: block;
+	height: 6.5rem;
+	line-height: 6.5rem;
+	width: 100%;
+	text-align: center;
+	font-size: 0.82rem;
+	font-family: PingFangSC-Light;
+	color: #ffffff;
+}
+
+.distributed_score {
+	position: absolute;
+	width: 100%;
+	top: 1.75rem;
+	font-size: 1.6rem;
+	font-family: PingFangSC-Light, TitilliumWeb-Regular;
+	color: #ffffff;
+}
+
+.retest {
+	width: 100%;
+	margin-top: 3.75rem;
+	font-size: 0.8rem;
+	font-family: PingFangSC-Light;
+	color: #ffffff;
+}
+
+#average_delay_main {
+	display: none;
+}
+
+.moveTitle {
+	margin-top: 0.38rem;
+	margin-bottom: 0.3rem;
+	float: right;
+	margin-right: 1.16rem;
+	font-family: PingFangSC-Regular;
+	font-size: 0.32rem;
+	color: #66ffff;
+}
+
+.stop_test {
+	width: 100%;
+	height: 1.8rem;
+}
+
+.stop_test button {
+	width: 4.08rem;
+	height: 1.04rem;
+	background-color: transparent;
+	border: 0.03rem solid #00ffff;
+	border-radius: 0.08rem;
+	outline: none;
+	text-decoration: none;
+	font-family: PingFangSC-Medium;
+	font-size: 0.4rem;
+	color: #e6ffff;
+}
+
+.stop_test button:active {
+	background-color: #1153d4;
+}
+.deleteConfirm{
+  display: none;
+  z-index: 999;
+  width: 85%;
+  height: 4.40rem;
+  position: fixed;
+  top:50%;
+  left: 50%;
+  background: #ffffff;
+  transform: translate(-50%,-50%);
+}
+
+.deleteConfirm #deleteRoomId{
+  display:none;
+}
+.deleteConfirm div{
+  text-align: center;
+  color: #333333;
+}
+.deleteConfirm div:nth-child(2){
+  margin-top: 0.63rem;
+}
+.deleteConfirm div:nth-child(3){
+   font-size:0.46rem;
+}
+.deleteConfirm div img {
+  width:0.72rem;
+  height: 0.72rem;
+}
+.deleteConfirm .btn_box{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+.deleteConfirm .btn_box button {
+  flex: 1;
+  height: 1.2rem;
+  background: #ffffff;
+  outline:none;
+  border:none;
+  border-top:1px solid #ccc;
+}
+
+.deleteConfirm .btn_box button:nth-child(1){
+  color: #2695fc;
+  border-right:1px solid #ccc;
+}
+
+.deleteConfirm #deleteRecordId{
+	display:none;
+}
+.shade {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 50;
+}
+
+.ap_title_left{
+	width:90%
+}

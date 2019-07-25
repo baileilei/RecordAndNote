@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <script type="text/javascript" src="../javascript/hwPluginService.js"></script>
+    <script type="text/javascript" src="../javascript/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../javascript/iscroll.js"></script>
+    <script type="text/javascript" src="../javascript/detail.js"></script>
+    <script>
+        document.documentElement.style.fontSize = window.screen.width / 3.75 + 'px';
+    </script>
+</head>
+
+<body onload="load();">
+    <header class="header">
+        <button onclick="goBack();"></button>
+        <h4><span locale_key="RECORD_DETAIL"></span></h4>
+    </header>
+    <div class="details">
+        <p class="title" id="wiFiName"></p>
+        <p class="score">
+            <span id="testTime"></span>
+            <span class="changColor"><i><span locale_key="ROOM_SCORE"></span></i><em id="score"></em></span>
+        </p>
+    </div>
+
+    <div class="house_type_img" id="house">
+        <div>
+            <img id="photo" src="../image/huxingtu.png" alt="">
+        </div>
+    </div>
+
+    <ul class="details_content" id="details_content">
+
+    </ul>
+</body>
+
+</html>

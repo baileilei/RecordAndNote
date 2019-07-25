@@ -1,0 +1,171 @@
+.header {
+  background: #134271;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 0.4rem;
+  z-index: 999;
+}
+
+.header button.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: #134271 url("../image/return.png") no-repeat center;
+  background-size: 0.12rem 0.24rem;
+}
+.header button.clearAll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.6rem;
+  height: 0.4rem;
+  font-size: 0.14rem;
+  background: #134271;
+  color: #ffffff;
+}
+.header h4 {
+  text-align: center;
+  line-height: 0.4rem;
+  color: #ffffff;
+  font-size: 0.18rem;
+}
+
+.history_list {
+  margin-top: 0.6rem;
+  width: 100%;
+  overflow: hidden;
+}
+.history_list ul{
+  overflow: hidden;
+}
+.history_list ul li{
+  position: relative;
+  transform: translateX(0px);
+}
+.history_list ul li div{
+  padding: 0.08rem 0 0.08rem 0;
+  margin: 0 0.15rem 0 0.15rem;
+  border-bottom: 1px solid #eeeeee;
+}
+.history_list ul li button{
+  position: absolute;
+  font-size: 0.16rem;
+  height: 100%;
+  width: 100px;
+  color: #ffffff;
+  background: red;
+  top: 0;
+  right: -100px;
+}
+
+.history_list ul li div p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.history_list ul li div p span em, .history_list ul li p span i {
+  font-style: normal;
+}
+
+.history_list ul li div p span i {
+  font-size: 0.10rem;
+}
+
+.history_list ul li div p:nth-child(1) {
+  margin-bottom: 0.05rem;
+  font-size: 0.14rem;
+  color: #333333;
+}
+
+.history_list ul li div p:nth-child(1) span:nth-child(1) {
+  max-width: 80%;
+  font-size: 0.16rem;
+  word-break: break-all;
+  text-align: center;
+}
+
+.history_list ul li div p:nth-child(2) {
+  font-size: 0.12rem;
+  color: #999999;
+}
+
+.history_list ul li div p:nth-child(2) span em {
+  color: #999999;
+}
+.deleteConfirm{
+  display: none;
+  z-index: 999;
+  width: 85%;
+  height: 1.53rem;
+  position: fixed;
+  top:50%;
+  left: 50%;
+  background: #ffffff;
+  transform: translate(-50%,-50%);
+}
+
+.deleteConfirm #deleteRoomId{
+  display:none;
+}
+.deleteConfirm div{
+  text-align: center;
+  color: #333333;
+}
+.deleteConfirm div:nth-child(2){
+  margin-top: 0.22rem;
+}
+.deleteConfirm div:nth-child(3){
+  margin-top: 0.12rem;
+}
+.deleteConfirm div img {
+  width:0.25rem;
+  height: 0.25rem;
+}
+.deleteConfirm .btn_box{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+.deleteConfirm .btn_box button {
+  flex: 1;
+  height: 0.42rem;
+  background: #ffffff;
+  border-top:1px solid #ccc;
+}
+.deleteConfirm .btn_box button:nth-child(1){
+  color: #999999;
+  border-right:1px solid #ccc;
+}
+.deleteConfirm .btn_box button:nth-child(2){
+  color: #2695fc;
+}
+
+.deleteConfirm #deleteRecordId{
+	display:none;
+}
+.good{
+  color: #4eaff5;
+}
+.pass{
+  color: #ff980c;
+}
+.bad{
+  color: #e54545;
+}
+
+.shade {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 50;
+}

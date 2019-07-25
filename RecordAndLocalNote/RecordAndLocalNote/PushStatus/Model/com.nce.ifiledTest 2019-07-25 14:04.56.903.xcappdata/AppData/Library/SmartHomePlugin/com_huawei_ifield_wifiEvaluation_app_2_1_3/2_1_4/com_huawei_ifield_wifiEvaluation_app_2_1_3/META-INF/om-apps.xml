@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<apps resource="resource/resource.properties" public-js-path="WebContent/wifiEvaluation/javascript/hwPluginService.js">
+	<app name="WIFI_EVALUATION" title="WIFI_TEST_REPORT" extend-point="com.huawei.ifield.wifiEvaluation">
+		<icon>wifiEvaluation/image/icon.png</icon>
+		<entry>wifiEvaluation/html/index.html</entry>
+	</app>
+</apps>
