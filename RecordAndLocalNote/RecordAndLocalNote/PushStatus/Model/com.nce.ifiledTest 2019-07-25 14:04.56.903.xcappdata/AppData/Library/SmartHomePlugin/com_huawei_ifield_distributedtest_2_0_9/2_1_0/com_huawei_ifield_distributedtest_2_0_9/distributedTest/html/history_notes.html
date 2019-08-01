@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <script type="text/javascript" src="../javascript/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/history_notes.css" />
+    <script type="text/javascript" src="../javascript/history_notes.js"></script>
+    <script type="text/javascript" src="../javascript/hwPluginService.js"></script>
+    <script>
+        document.documentElement.style.fontSize = window.screen.width / 10.80 + 'px';
+    </script>
+</head>
+
+<body onload="load();">
+    <div class="title">
+        <div class="title_left" onclick="goBack();"><a></a></div>
+        <div class="title_center"><span local_key="HISTORY_RECORD"></span></div>
+        <button onclick="clearAll();" class="clearAll"><span local_key="CLEARALL"></span></button>
+    </div>
+    <div class="history_list">
+    <ul id="ul_list">
+    
+     </ul>
+    </div>
+ <div class="deleteConfirm">
+	<div id="deleteRecordId"></div>
+    <div><img src="../images/delete_bg.png" alt=""></div>
+    <div><span id="deleteRec"></span></div>
+    <div class="btn_box">
+         <button onclick="cancelDeleteRecord()"><span local_key="CANCEL"></span></button>
+         <button onclick="confirmDeleteRecord()"><span local_key="CONFIRM"></span></button>
+    </div>
+</div>
+<div class="shade"></div>   
+</body>
+</html>

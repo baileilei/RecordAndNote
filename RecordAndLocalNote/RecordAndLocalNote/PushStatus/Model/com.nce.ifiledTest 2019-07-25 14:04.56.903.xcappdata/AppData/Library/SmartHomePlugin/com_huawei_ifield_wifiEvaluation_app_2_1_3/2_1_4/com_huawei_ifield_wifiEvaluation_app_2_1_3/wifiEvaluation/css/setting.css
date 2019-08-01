@@ -1,0 +1,97 @@
+.header {
+  background: #134271;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 0.4rem;
+}
+
+.header button {
+  width: 0.6rem;
+  font-size: 0.3rem;
+  font-weight: bolder;
+  background: #134271;
+  line-height: 0.4rem;
+}
+
+.header button:nth-child(1) {
+  background: url("../image/return.png") no-repeat center;
+  background-size: 0.12rem 0.24rem;
+}
+
+.title-new {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 0.02rem;
+  /* padding: 0 0.8rem 0 0.2rem; */
+  font-size: 0.20rem;
+  height: 0.32rem;
+  line-height: 0.4rem;
+  color: #ffffff;
+}
+
+h4.title {
+  background: #ffffff;
+  margin-top: 0.4rem;
+  padding: 0 0.2rem 0 0.2rem;
+  font-size: 0.2rem;
+  font-weight: bolder;
+  height: 0.32rem;
+  line-height: 0.32rem;
+  color: #4a4a4a;
+}
+
+.parameter_setting {
+  margin-top: 0.4rem;
+  padding: 0 0.4rem 0 0.4rem;
+}
+
+.parameter_setting li {
+  border-bottom: 1px solid #cccccc;
+  background: url("../image/next.png") no-repeat center right;
+}
+
+.parameter_setting li:last-child {
+  border-bottom: 0;
+}
+
+.parameter_setting li .description {
+  line-height: 0.3rem;
+  color: #333333;
+  font-size: 0.14rem;
+}
+
+.parameter_setting li .numbers {
+  color: #999999;
+  line-height: 0.26rem;
+  font-size: 0.12rem;
+}
+
+.input_box {
+  margin-top: 0.3rem;
+  padding: 0 0.2rem 0 0.2rem;
+  position: relative;
+}
+
+.input_box input {
+  width: 100%;
+  height: 0.3rem;
+  padding: 0 0.2rem 0 0.1rem;
+  border: 0;
+  border-bottom: 1px solid #cccccc;
+  outline: none;
+}
+
+.input_box button {
+  width: 0.24rem;
+  height: 0.24rem;
+  position: absolute;
+  top: 0.03rem;
+  right: 0.3rem;
+  background: url("../image/clear.png") no-repeat center;
+  background-size: 0.26rem 0.26rem;
+}

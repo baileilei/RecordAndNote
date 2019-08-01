@@ -1,0 +1,39 @@
+{
+  "isModify" : false,
+  "testResultList" : [
+
+  ],
+  "roomList" : [
+    {
+      "roomName" : "客厅",
+      "roomType" : "livingroom",
+      "roomId" : 1
+    },
+    {
+      "roomId" : 2,
+      "roomName" : "主卧",
+      "roomType" : "bedroom"
+    },
+    {
+      "roomType" : "diningroom",
+      "roomId" : 3,
+      "roomName" : "餐厅"
+    },
+    {
+      "roomName" : "洗手间",
+      "roomType" : "bathroom",
+      "roomId" : 4
+    },
+    {
+      "roomId" : 5,
+      "roomName" : "厨房",
+      "roomType" : "kitchen"
+    }
+  ],
+  "setting" : {
+    "pingTarget" : "192.168.0.1"
+  },
+  "urlList" : [
+
+  ]
+}

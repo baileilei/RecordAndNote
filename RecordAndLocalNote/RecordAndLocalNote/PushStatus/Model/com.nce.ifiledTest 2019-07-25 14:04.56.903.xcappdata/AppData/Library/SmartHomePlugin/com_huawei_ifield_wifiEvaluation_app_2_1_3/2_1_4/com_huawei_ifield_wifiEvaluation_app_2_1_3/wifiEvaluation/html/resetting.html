@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/resetting.css">
+    <script type="text/javascript" src="../javascript/hwPluginService.js"></script>
+    <script type="text/javascript" src="../javascript/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../javascript/iscroll.js"></script>
+    <script type="text/javascript" src="../javascript/setting.js"></script>
+    <script>
+        document.documentElement.style.fontSize = window.screen.width / 3.75 + 'px';
+    </script>
+</head>
+
+<body onload="reset();">
+    <header class="header">
+        <button class="back" onclick="goBack()"></button>
+        <h4 class="title"><span locale_key="TEST_WEB_LINK"></span></h4>
+        <button class="confirm" onclick="confirmSet();"><span locale_key="CONFIRM"></span></button>
+    </header>
+    <div class="input_box">
+        <input id="setValue" type="text" oninput="onInput(event)"><button id="clearButton" onclick="clearText()" style="display: none"></button>
+        <span class="marked_words" id="marked_words"></span>
+    </div>
+</body>
+
+</html>

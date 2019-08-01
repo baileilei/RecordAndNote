@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>一键体检</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/phyExamination.css">
+    <script>
+        document.documentElement.style.fontSize = window.screen.width / 3.75 + 'px';
+    </script>
+    <script src="../../public/js/jquery-3.3.1.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="back_and_top">
+        <header class="header back_and_top">
+            <button onclick="goBack()"></button>
+            <span class="title-new" local_key="PLUGIN_NAME"></span>
+            <button></button>
+        </header>
+        <h4 class="title"><span></span></h4>
+        <p class="wifi_name" id="wifi_ssid"></p>
+        <div class="banner" id="banner">
+            <div class="out">
+                <div class="inner">
+                    <div class="content">
+                        <div class="content_result" id="content_result"><span id="count"></span><span id="unit"></span>
+                        </div>
+                        <div class="content_state" id="content_state"></div>
+                        <div class="content_problem" id="content_problem"></div>
+                        <p><button id="checkStatus" onclick="switchCheck()" local_key="START_CHECK"></button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wifi_test_content">
+        <ul class="port_ul">
+        </ul>
+    </div>
+</body>
+
+<script src="../../public/js/hw_plugin_public.js" type="text/javascript"></script>
+<script src="../../public/js/hwPluginService.js" type="text/javascript"></script>
+<script src="../javascript/phyExamination.js"></script>
+
+</html>

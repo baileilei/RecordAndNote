@@ -1,0 +1,199 @@
+.header {
+  background: #134271;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 0.6rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eeeeee;
+  z-index: 9999;
+}
+
+.header button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.4rem;
+  height: 0.58rem;
+  background: #134271 url("../image/return.png") no-repeat center;
+  background-size: 0.12rem 0.24rem;
+}
+
+.header h4 {
+  text-align: center;
+  line-height: 0.6rem;
+  font-size: 0.18rem;
+  color: #ffffff;
+}
+
+.details {
+  margin-top: 0.6rem;
+  padding: 0.1rem 0.4rem 0.1rem 0.4rem;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+  background: #ffffff;
+  z-index: 20;
+}
+
+.details .title {
+  font-size: 0.16rem;
+  color: #333333;
+}
+
+.details .score {
+  margin-top: 0.05rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details .score span:nth-child(1) {
+  color: #999999;
+}
+
+.details .score span:nth-child(2) em, .details .score span:nth-child(2) i {
+  font-style: normal;
+}
+
+.details .score span:nth-child(2) em {
+  font-size: 0.16rem;
+  color: #333333;
+}
+
+.details .score span:nth-child(2) i {
+  font-size:0.12rem;
+  color: #999999;
+}
+
+.house_type_img {
+   display:none;
+   background: #ddd;
+   height: 3.61rem;
+   padding: 0.44rem 0.2rem 0.1rem 0.2rem;
+   position: relative;
+   z-index: 10;
+  margin-top: -0.35rem;
+}
+.btn {
+    position: absolute;
+    width: 0.25rem;
+    height: 0.3rem;
+    z-index: 666;
+}
+
+house_type_img div{
+  width: 100%;
+}
+
+.house_type_img div img {
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+  height: 3.0rem;
+}
+.house_type_img .btn img{
+  width: 0.25rem;
+  height: 0.3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.house_type_img .btn button{
+  height: 0.3rem;
+  line-height: 0.3rem;
+  width: 0.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: none;
+  color: #ffffff;
+}
+
+.details_content > li {
+  border-bottom: 1px solid #eeeeee;
+  padding: 0 0.2rem 0.15rem 0.2rem;
+}
+
+.details_content > li:nth-child(2n+1) {
+  background: #eeeeee;
+}
+
+.details_content > li .title {
+  margin-left: 0.2rem;
+}
+
+.details_content > li .title span {
+  margin-right: 0.2rem;
+  color: #333333;
+  font-size: 0.16rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+}
+.details_content > li .title span em ,.details_content > li .title span i{
+  font-style: normal;
+}
+.details_content > li .title span em {
+  font-size: 0.12rem;
+}
+
+
+.details_content > li ul {
+  display: flex;
+}
+
+.details_content > li ul li {
+  flex: 1;
+  border-right: 1px solid #cccccc;
+}
+
+.details_content > li ul li:last-child {
+  border-right: 0;
+}
+
+.details_content > li ul li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details_content > li ul li div img {
+  width: 0.12rem;
+  height: 0.12rem;
+  margin-right: 0.05rem;
+  display: block;
+}
+
+.details_content > li ul li div:nth-child(1) {
+  margin-bottom: 0.18rem;
+}
+.details_content > li .title .blueColor{
+  color: #4eaff5;
+}
+.details_content > li .title .yellowColor{
+  color: #ff980c;
+}
+.details_content > li .title .redColor{
+  color: #e54545;
+}
+
+.house_type_img .btn span{
+    position: absolute;
+    text-align: center;
+    top: -0.22rem;
+    left: -0.15rem;
+    width: 0.55rem;
+    z-index: 22;
+}
+.blueColor{
+  color: #4eaff5;
+}
+.yellowColor{
+  color: #ff980c;
+}
+.redColor{
+  color: #e54545;
+}
+
+

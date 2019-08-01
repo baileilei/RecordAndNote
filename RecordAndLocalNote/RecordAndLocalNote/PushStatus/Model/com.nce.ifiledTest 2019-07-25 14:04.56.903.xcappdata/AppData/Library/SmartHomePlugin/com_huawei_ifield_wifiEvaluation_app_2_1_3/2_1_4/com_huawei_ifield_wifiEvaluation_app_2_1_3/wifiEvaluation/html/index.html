@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/swiper-4.3.3.min.css">
+    <script>
+        document.documentElement.style.fontSize = window.screen.width / 3.75 + 'px';
+        var distance = window.screen.width / 3.75;
+    </script>
+</head>
+
+<body onload="load();">
+    <header class="header">
+        <button onclick="goBack();"></button>
+        <span class="title-new" locale_key="WIFI_TEST_REPORT"></span>
+        <button id="setting"></button>
+    </header>
+    <ul class="setting_list" id="setting_list">
+        <li>
+            <a href="javascript:goHistory();"><img src="../image/record.png" alt=""><span locale_key="TEST_RECORD"></span></a>
+        </li>
+        <li>
+            <a href="javascript:goSetting();"><img src="../image/setting.png" alt=""><span locale_key="SETTINGS"></span></a>
+        </li>
+    </ul>
+    <h4 class="title"><span></span></span>
+    </h4>
+    <p class="wifi_name" id="wifi_name"></p>
+    <div class="banner">
+        <div class="content">
+            <div class="img_box">
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <div class="div"><span id="score">--</span></div>
+
+            <p style="color: rgba(0,0,0,0)">&</p>
+            <p><span locale_key="TOTAL_SCORE"></span></p>
+        </div>
+
+    </div>
+    <div class="wifi_information">
+        <ul>
+            <li class="connectRate">
+                <p><span locale_key="CONNECTION_RATE"></span></p>
+                <p id="connectRate">--Mbps</p>
+            </li>
+            <li>
+                <p><span locale_key="SIGNAL_STRENGTH"></span></p>
+                <p id="signalStrength">--dBm</p>
+            </li>
+            <li>
+                <p><span locale_key="TIME_DELAY"></span></p>
+                <p id="timeDelay">--ms</p>
+            </li>
+        </ul>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="swiper-slide">
+                <ul id="room_container">
+
+                    <!-- 
+<li class='li_room' ><button class='close closeRoom'></button><img src='../image/livingroom.png'>
+<div class='right'><p class='title'><span style='white-space:pre;'>触发</span><span></span></p>
+<div  class='content_text'><p>点击标记</p></div></div> </li>
+
+<li class='li_room' ><button class='close closeRoom'></button><img src='../image/livingroom.png'>
+<div class='right'><p class='title'><span style='white-space:pre;'>厨房</span><span></span></p>
+<div  class='content_text'><p>点击标记</p></div></div> </li>
+
+<li class='li_room' ><button class='close closeRoom'></button><img src='../image/livingroom.png'>
+<div class='right'><p class='title'><span style='white-space:pre;'>大厅</span><span></span></p>
+<div  class='content_text'><p>点击标记</p></div></div> </li>
+ -->
+                </ul>
+                <div class="bottom_btn" id="nophotoGenerate" onclick="saveEvaluation()">
+                    <button>
+                        <span locale_key="GENERATE_REPORT"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="swiper-slide house_type" id="house">
+                <p><span locale_key="PLEASE_MARK_ON_PHOTO"></span>
+                    <button onclick="changePhoto();">
+                        <span locale_key="CHANGEPHOTO"></span>
+                    </button>
+                </p>
+                <div class="house_type_none">
+                    <a href="javascript:importPhoto()">
+                        <span id="uploadMark">
+
+                        </span>
+                    </a>
+                </div>
+                <div class="bottom_btn" id="photoGenerate" onclick="savePhotoEvaluation()">
+                    <button>
+                        <span locale_key="GENERATE_REPORT"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+    <div class="room_add">
+        <div class="input_add_room">
+            <input id="inputRoomName" type="text" maxlength="16">
+            <button class="clear_text"></button>
+            <span class="marked_words" id="marked_words"></span>
+        </div>
+        <div class="room_type">
+            <p><span locale_key="CHOOSE_ROOM_ICON"></span></p>
+            <ul>
+                <li>
+                    <a id="imageId_0" href="javascript:void (0)">
+                        <img src="../image/livingroom_grey.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a id="imageId_1" href="javascript:void (0)">
+                        <img src="../image/bedroom_grey.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a id="imageId_2" href="javascript:void (0)">
+                        <img src="../image/diningroom_grey.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a id="imageId_3" href="javascript:void (0)">
+                        <img src="../image/bathroom_grey.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a id="imageId_4" href="javascript:void (0)">
+                        <img src="../image/kitchen_grey.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <button class="close" onclick="cancelAddRoom()">
+            <span locale_key="CANCEL"></span>
+        </button>
+        <button class="confirm" onclick="confirmAddRoom()">
+            <span locale_key="CONFIRM"></span>
+        </button>
+    </div>
+    <div class="deleteConfirm">
+        <div id="deleteRoomId"></div>
+        <div><img src="../image/delete_bg.png" alt=""></div>
+        <div>
+            <span locale_key="DO_YOU_CONFIRM_DELETE"></span>
+        </div>
+        <div class="btn_box">
+            <button onclick="cancelDeleteRoom()">
+                <span locale_key="CANCEL"></span>
+            </button>
+            <button id="btn_deleteRoom" onclick="confirmDeleteRoom()">
+                <span locale_key="CONFIRM"></span>
+            </button>
+        </div>
+    </div>
+    <div class="nowifiHint">
+        <div><img src="../image/delete_bg.png" alt=""></div>
+        <div><span locale_key="NOWIFIHINT"></span></div>
+        <div class="btn_box">
+            <button id="btn_goBack" onclick="goBack()">
+                <span locale_key="CONFIRM"></span>
+            </button>
+        </div>
+    </div>
+    <div class="shade"></div>
+    <script type="text/javascript" src="../javascript/hw_plugin_public.js"></script>
+    <script type="text/javascript" src="../javascript/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../javascript/hwPluginService.js"></script>
+    <script type="text/javascript" src="../javascript/iscroll.js"></script>
+    <script type="text/javascript" src="../javascript/swiper-4.3.3.min.js"></script>
+    <script type="text/javascript" src="../javascript/index.js"></script>
+</body>
+
+</html>
