@@ -32,10 +32,28 @@ class StatusViewController: UIViewController {
     }
     
     @objc func test() {
-        let array = dataModel.userList
-        for user in array {
-            print(user.name)
-        }
+        
+        
+    }
+    
+    func testImageSave() {
+        let userDefault = UserDefaults.standard
+        
+        //UIImage对象存储
+        //将对象转换成Data流
+        let image1 = UIImage(named: "apple.jpg")!
+        let image2 = UIImage(cgImage: image1.cgImage!, scale: image1.scale,
+                             orientation: image1.imageOrientation)
+        let imageData = NSKeyedArchiver.archivedData(withRootObject: image2)
+        //存储Data对象
+        userDefault.set(imageData, forKey: "imageData")
+        
+        //UIImage对象读取
+        //获取Data
+        let objData = userDefault.data(forKey: "imageData")
+        //还原对象
+        let myImage = NSKeyedUnarchiver.unarchiveObject(with: objData!) as? UIImage
+        print(myImage)
     }
     
     //http://www.hangge.com/blog/cache/detail_719.html
